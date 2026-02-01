@@ -4,117 +4,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Allen Jeong's portfolio - AI Engineer, software developer, and high school student showcasing projects and skills">
+  <meta name="description" content="Allen Jeong's portfolio - AI Engineer, software developer, showcasing projects and skills">
   <title>Allen Jeong | AI Engineer & Developer</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Basic CSS for a clean modern look */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+    /* Base */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f4f8; color: #333; line-height:1.6; }
 
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
     header {
-      background-color: #4a90e2;
-      color: white;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: #fff;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 80px 20px 50px;
     }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.3rem; opacity: 0.9; }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-    }
-
+    /* Navigation */
     nav {
-      text-align: center;
-      background: #333;
+      display: flex;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
     nav a {
-      display: inline-block;
-      color: white;
-      text-decoration: none;
-      margin: 10px 15px;
-      padding: 10px 15px;
-      transition: background 0.3s;
+      margin: 15px 25px;
+      padding: 8px 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
-
     nav a:hover {
-      background: #4a90e2;
-      border-radius: 5px;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: #fff;
+      transform: scale(1.1);
     }
 
-    main {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
+    /* Main */
+    main { max-width: 1000px; margin: 40px auto; padding:0 20px; }
 
     section {
       margin-bottom: 60px;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    section:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); }
+
+    /* Colorful Sections */
+    #about { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+    #skills { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+    #projects { background: linear-gradient(135deg, #f6d365, #fda085); }
+    #career { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+    #contact { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
 
     h2 {
-      color: #4a90e2;
-      border-bottom: 2px solid #4a90e2;
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #fff;
+      display: inline-block;
       padding-bottom: 5px;
     }
+    h3 { margin-top: 20px; color: #333; }
 
-    ul {
-      list-style: disc inside;
-      margin-top: 10px;
-    }
+    ul { margin-top: 10px; padding-left: 20px; }
+    li { margin-bottom: 8px; }
 
     figure {
-      margin: 20px 0;
-      text-align: center;
+      margin: 20px 0; text-align: center;
+      transition: transform 0.3s ease;
     }
-
+    figure:hover { transform: scale(1.03); }
     figure img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
+      max-width: 100%; border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     }
+    figcaption { font-size:0.9rem; color:#555; margin-top:5px; }
 
-    figcaption {
-      font-size: 0.9rem;
-      margin-top: 5px;
-      color: #555;
-    }
+    /* Contact */
+    #contact p { margin-bottom: 10px; font-weight:600; }
+    #contact a { color:#ff758c; transition: color 0.3s ease; }
+    #contact a:hover { color:#ff7eb3; }
 
+    /* Footer */
     footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #333;
-      color: white;
+      text-align: center; padding:30px 20px;
+      background: #333; color:#fff; margin-top:40px; border-top-left-radius:15px; border-top-right-radius:15px;
     }
 
-    footer a {
-      color: #4a90e2;
-      text-decoration: none;
+    /* Responsive */
+    @media(max-width:768px){
+      header h1{ font-size:2.2rem; }
+      header p{ font-size:1rem; }
+      nav a{ margin:10px 15px; }
     }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media(max-width: 600px){
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
+    @media(max-width:480px){
+      h2{ font-size:1.5rem; }
+      section{ padding:15px; }
     }
   </style>
 </head>
@@ -138,25 +134,48 @@
   <!-- About Me -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a senior high school student passionate about computing, software development, and artificial intelligence. I enjoy designing and coding applications that solve practical problems, especially in communication and accessibility. My goal is to study computer science and create technology that connects people across cultures and languages.</p>
+    <p>I am a senior high school student with a strong interest in computing, software development, and artificial intelligence. I enjoy designing and coding applications that solve practical problems, especially those related to communication and accessibility. My long-term goal is to study computer science and contribute to technology that connects people across cultures and languages.</p>
   </section>
 
-  <!-- Skills & Tools -->
+  <!-- Skills -->
   <section id="skills">
     <h2>Skills & Tools</h2>
     <ul>
-      <li><strong>Programming:</strong> Python, JavaScript, HTML, CSS</li>
-      <li><strong>Design Tools:</strong> Figma, Canva</li>
-      <li><strong>Dev Tools:</strong> VS Code, GitHub, APIs</li>
-      <li><strong>Concepts:</strong> Algorithmic thinking, event-driven programming, client–server model, data validation, UI/UX principles, iterative development</li>
+      <li>Python, JavaScript, HTML, CSS</li>
+      <li>Figma, Canva</li>
+      <li>VS Code, GitHub, APIs</li>
+      <li>Algorithmic thinking, event-driven programming, client–server model, data validation, UI/UX principles, iterative development</li>
     </ul>
   </section>
 
-  <!-- Projects -->
+  <!-- Project 1 -->
   <section id="projects">
+    <h2>Project Showcase: Multilingual Translation App</h2>
+    <p>This project is a prototype translation application that demonstrates translation logic, API integration, and interface design. It solves real-world communication challenges caused by language barriers.</p>
+    <h3>Key Features</h3>
+    <ul>
+      <li>Text input box for source language</li>
+      <li>Dropdown menu to select target language</li>
+      <li>Translate button to trigger processing</li>
+      <li>Output area displaying translated text</li>
+      <li>Clean, minimal interface focused on usability</li>
+    </ul>
+    <h3>Interface Screenshots</h3>
+    <figure>
+      <img src="projects/translation-app/screenshots/app-interface.png" alt="Translation App Interface">
+      <figcaption>Translation App Interface</figcaption>
+    </figure>
+    <h3>Wireframes</h3>
+    <figure>
+      <img src="projects/translation-app/design/wireframe1.png" alt="Translation App Wireframe 1">
+    </figure>
+    <figure>
+      <img src="projects/translation-app/design/wireframe2.png" alt="Translation App Wireframe 2">
+    </figure>
+    <p><a href="https://github.com/yourusername/multilingual-translation-app" target="_blank">View Project on GitHub</a></p>
+
     <h2>Project Showcase: bons.ai UI/UX Design</h2>
     <p>Designed a modern UI/UX concept for bons.ai, transforming it from a command-line tool into a graphical application. Developed a cohesive visual identity including logo, color palette, typography, and interface mockups.</p>
-
     <h3>Key Contributions & Skills</h3>
     <ul>
       <li>Designed UI/UX components ready for frontend implementation</li>
@@ -164,38 +183,24 @@
       <li>Created multiple interface prototypes emphasizing accessibility and readability</li>
       <li>Developed a brand identity aligned with user-friendly principles</li>
       <li>Ensured designs were code-ready for responsive development</li>
-      <li>Applied AI resources</li>
     </ul>
-
-    <h3>Technical Takeaways</h3>
-    <ul>
-      <li>Translated functional requirements into visual and coded interfaces</li>
-      <li>Applied UI/UX principles and visual hierarchy for implementation</li>
-      <li>Explored design-to-code workflows for prototyping</li>
-    </ul>
-
     <h3>Interface Screenshots</h3>
     <figure>
-      <img src="https://github.com/hyunjun7pp26-hash/Allen-Jeong---AI-engineeri/blob/4a03740d685bdbbd34ef8f03b2703abe4781dd41/009e55b4e7c23a9e314fae8152dd4e1c.jpg" alt="bons.ai UI screenshot 1">
-      <figcaption>Home screen interface of bons.ai</figcaption>
+      <img src="projects/bonsai/screenshots/bonsai_mockup1.png" alt="bons.ai Mockup 1">
     </figure>
     <figure>
-      <img src="https://github.com/hyunjun7pp26-hash/Allen-Jeong---AI-engineeri/blob/4a03740d685bdbbd34ef8f03b2703abe4781dd41/5579f99ff0ee5fb7d5f07f87da20b746.jpg" alt="bons.ai UI screenshot 2">
-      <figcaption>Dashboard and features view</figcaption>
+      <img src="projects/bonsai/screenshots/bonsai_mockup2.png" alt="bons.ai Mockup 2">
     </figure>
-
     <h3>Wireframes / Design Steps</h3>
     <figure>
-      <img src="https://github.com/hyunjun7pp26-hash/Allen-Jeong---AI-engineeri/blob/4a03740d685bdbbd34ef8f03b2703abe4781dd41/be21e608649828b7f46cd64f277cbe9b.jpg" alt="bons.ai wireframe 1">
-      <figcaption>Initial wireframe sketches</figcaption>
+      <img src="projects/bonsai/design/wireframe1.png" alt="bons.ai Wireframe 1">
     </figure>
     <figure>
-      <img src="https://github.com/hyunjun7pp26-hash/Allen-Jeong---AI-engineeri/blob/4a03740d685bdbbd34ef8f03b2703abe4781dd41/cbb8e780abecff9ebbd274f59008e7bc.jpg" alt="bons.ai wireframe 2">
-      <figcaption>Finalized interface wireframes</figcaption>
+      <img src="projects/bonsai/design/wireframe2.png" alt="bons.ai Wireframe 2">
     </figure>
   </section>
 
-  <!-- Career Connection -->
+  <!-- Career -->
   <section id="career">
     <h2>Career Connection</h2>
     <ul>
